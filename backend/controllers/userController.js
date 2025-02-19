@@ -133,7 +133,7 @@ const loginUser = asyncHandler(async (req, res) => {
       });
       return; //exit function after sending response
     }else{
-        res.status(400).send("wrong password,pls provide correct password")
+      res.status(400).send("wrong password,pls provide correct password")
     }
   }
 });
