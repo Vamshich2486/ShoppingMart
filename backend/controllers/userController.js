@@ -136,6 +136,9 @@ const loginUser = asyncHandler(async (req, res) => {
       res.status(400).send("wrong password,pls provide correct password")
     }
   }
+  else{
+    res.status(400).send("wrong email,pls provide correct email")
+  }
 });
 
 const logoutCurrentUser = asyncHandler(async (req, res) => {

@@ -1,2 +1,7 @@
 @import "tailwindcss";
+.slick-prev:before,
+.slick-next:before {
+  color: pink !important;
+}
+
 
