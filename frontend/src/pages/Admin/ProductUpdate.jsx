@@ -14,7 +14,7 @@ const ProductUpdate = () => {
     const params = useParams();
 
     const { data: productData } = useGetProductByIdQuery(params._id);
-    console.log(productData);
+    //console.log(productData);
 
     const [image, setImage] = useState(productData?.image || "");
     const [name, setName] = useState(productData?.name || "");
@@ -25,8 +25,8 @@ const ProductUpdate = () => {
     const [category, setCategory] = useState(productData?.category || "");
     const [quantity, setQuantity] = useState(productData?.quantity || "");
     const [brand, setBrand] = useState(productData?.brand || "");
-    const [stock, setStock] = useState(productData?.countInStock);
-    //hook
+    const [stock, setStock] = useState(productData?.countInStock || 0);
+    //hook 
     const navigate = useNavigate();
     
     //fetch categories using RTK Query
@@ -49,6 +49,7 @@ const ProductUpdate = () => {
           setQuantity(productData.quantity);
           setBrand(productData.brand);
           setImage(productData.image);
+          setStock(productData.countInStock);
         }
     }, [productData]);
 

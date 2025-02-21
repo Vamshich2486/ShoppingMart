@@ -39,7 +39,8 @@ const Login = () => {
             
         } catch (error) {
             //toast.error(error?.data?.message || error.message || "An error occured") ;
-            toast.error("invalid credientials")
+            // toast.error("invalid credientials")
+            toast.error(error?.data || "an error occured")
             
         }
     }
