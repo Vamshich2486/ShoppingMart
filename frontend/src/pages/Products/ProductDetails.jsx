@@ -51,7 +51,7 @@ const ProductDetails = () => {
   return (
     <>
       <div>
-        <Link to="/" className="text-pink-600 font-semibold hover:underline ml-[10rem]">Go Back</Link>
+        <Link to="/shop" className="text-pink-600 font-semibold hover:underline ml-[10rem]">Go Back</Link>
       </div>
 
       {isLoading ? (<Loader />) : error ? (
